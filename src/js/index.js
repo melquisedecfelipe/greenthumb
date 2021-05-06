@@ -43,7 +43,7 @@ class FormValue {
         const cardsHTML = data.map(card => {
           return `
             <div class="card" key=${card.id}>
-              ${card.staff_favorite ? "<span>✨ Staff favorite</span>" : ""}
+              ${card.staff_favorite ? '<span>✨ Staff favorite</span>' : ''}
               <aside>
                 <img src="${card.url}" alt="${card.name}">
               </aside>
@@ -56,10 +56,10 @@ class FormValue {
                       <img src="${card.toxicity ? toxic : pet}" alt="Pets" >
                     </li>
                     <li>
-                      <img src="${card.sun === "no" ? noSun : lowSun}" alt="Sun" >
+                      <img src="${card.sun === 'no' ? noSun : lowSun}" alt="Sun" >
                     </li>
                     <li>
-                      <img src="${card.water === "rarely" ? oneDrop : card.water === "regularly" ? twoDrop : threeDrop}" alt="Water" >
+                      <img src="${card.water === 'rarely' ? oneDrop : card.water === "regularly" ? twoDrop : threeDrop}" alt="Water" >
                     </li>
                   </ul>
                 </span>
