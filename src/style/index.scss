@@ -1,0 +1,478 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+
+  select:focus {
+    outline: none;
+  }
+}
+
+header {
+  position: relative;
+  height: 550px;
+  padding: 40px 36px;
+  background: url("../assets/hero/mobile/mobile-leaves.png") no-repeat top;
+  background-size: contain;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 550px;
+    bottom: 0;
+    left: 0;
+    background: #75bc97 url("../assets/hero/mobile/mobile-plantperson.png")
+      no-repeat center 90%;
+    background-size: 80%;
+    z-index: -1;
+  }
+
+  > div {
+    > span {
+      > h1 {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 49px;
+        color: #ffffff;
+        margin-top: 36px;
+        margin-bottom: 16px;
+      }
+
+      > .arrow {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    > img {
+      display: none;
+    }
+  }
+}
+
+section {
+  padding: 40px 36px;
+
+  > form {
+    > .form__group {
+      display: flex;
+      flex-direction: column;
+
+      ~ .margin__top {
+        margin-top: 40px;
+      }
+
+      > label {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 22px;
+        color: #848484;
+        margin-top: 8px;
+        margin-bottom: 24px;
+        max-width: 220px;
+        height: 130px;
+
+        > .sun {
+          width: 75px;
+          height: 75px;
+        }
+
+        > .water {
+          width: 103px;
+          height: 75px;
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+
+        > .pets {
+          width: 75px;
+          height: 62px;
+        }
+
+        > p {
+          margin: 0;
+        }
+      }
+
+      > select {
+        border: 1px solid #a8a8a8;
+        border-radius: 19px;
+        height: 40px;
+        padding: 0 16px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 27px;
+        color: #848484;
+        transition: all 0.25s;
+
+        &:focus {
+          border-color: #75bc97;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 36px;
+  background: #f6f6f6;
+
+  > #no__results {
+    display: flex;
+    flex-direction: column;
+
+    > span {
+      > h1 {
+        font-size: 45px;
+        line-height: 55px;
+        color: #a9a9a9;
+        margin: 0;
+      }
+
+      > p {
+        font-size: 16px;
+        line-height: 27px;
+        color: #a9a9a9;
+        margin-top: 16px;
+        margin-bottom: 40px;
+        max-width: 220px;
+      }
+    }
+
+    > img {
+      width: 85px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  > #results {
+    display: none;
+
+    > img {
+      width: 160px;
+    }
+
+    > h1 {
+      font-size: 40px;
+      line-height: 49px;
+      color: #0c261c;
+      margin-top: 16px;
+      margin-bottom: 40px;
+    }
+
+    > #cards {
+      display: flex;
+      overflow-y: auto;
+
+      > .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        border-radius: 5px;
+        padding: 16px;
+        min-width: 220px;
+
+        & + div {
+          margin-left: 16px;
+        }
+
+        > span {
+          position: absolute;
+          background: #75bc97;
+          top: 24px;
+          left: 0;
+          box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.181163);
+          font-size: 18px;
+          color: #ffffff;
+          font-weight: bold;
+          line-height: 21px;
+          padding: 6px 16px;
+          border-radius: 0 25px 25px 0;
+        }
+
+        > aside {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 175px;
+
+          > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        > div {
+          margin-top: 24px;
+
+          > h3 {
+            font-size: 16px;
+            line-height: 28px;
+            color: #1e6b4e;
+            margin: 0;
+            margin-top: 4px;
+          }
+
+          > span {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            > p {
+              font-size: 16px;
+              line-height: 28px;
+              color: #257556;
+              font-weight: bold;
+              margin: 0;
+            }
+
+            > ul {
+              display: flex;
+              list-style: none;
+              padding-left: 0;
+              margin: 0;
+
+              > li {
+                margin: auto;
+
+                & + li {
+                  margin-left: 8px;
+                }
+
+                > img {
+                  height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    > button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: 1px solid #15573f;
+      box-sizing: border-box;
+      border-radius: 25px;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: #15573f;
+      margin-top: 60px;
+      width: 100%;
+      height: 50px;
+      transition: all 0.25s;
+      cursor: pointer;
+
+      > img {
+        margin-right: 16px;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  header {
+    background-position: center -30%;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  header {
+    background-position: center -150%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 60px;
+    height: 100%;
+    background: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      background: #75bc97 url("../assets/hero/desktop/left-leaves.png")
+        no-repeat left;
+      background-size: cover;
+      z-index: -1;
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 850px;
+      margin: 0 auto;
+
+      > span {
+        > h1 {
+          font-size: 70px;
+          line-height: 85px;
+          max-width: 400px;
+          margin-top: 40px;
+          margin-bottom: 24px;
+        }
+      }
+
+      > img {
+        display: block;
+        width: 335px;
+      }
+    }
+  }
+
+  section {
+    padding: 60px;
+
+    > form {
+      max-width: 850px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 100px;
+
+      > .form__group {
+        ~ .margin__top {
+          margin: 0;
+        }
+
+        > label {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  main {
+    padding: 60px;
+
+    > #no__results {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    > #results {
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    &::before {
+      background-size: contain;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      right: 0;
+      background: url("../assets/hero/desktop/right-leaves.png") no-repeat right;
+      background-size: contain;
+      z-index: -1;
+    }
+  }
+
+  section {
+    > form {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  main {
+    > #results {
+      > #cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24px;
+
+        > .card {
+          & + div {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    > #results {
+      > #cards {
+        grid-template-columns: repeat(4, 1fr);
+
+        > .card {
+          min-width: 100px;
+
+          &:first-child {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            > aside {
+              height: 400px;
+            }
+
+            > div {
+              display: flex;
+              justify-content: space-between;
+
+              > h3 {
+                font-size: 35px;
+                line-height: 37px;
+              }
+
+              > span {
+                flex-direction: column;
+                align-items: flex-end;
+
+                > p {
+                  font-size: 24px;
+                  line-height: 28px;
+                  margin-bottom: 16px;
+                }
+              }
+            }
+          }
+
+          & + div {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
