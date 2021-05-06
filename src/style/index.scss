@@ -171,6 +171,24 @@ main {
       display: flex;
       overflow-y: auto;
 
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #75bc97;
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        opacity: 0.75;
+      }
+
       > .card {
         position: relative;
         display: flex;
