@@ -8,20 +8,20 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./src/style/index.scss" />
+    <link rel="stylesheet" href="./style/index.scss" />
   </head>
 
   <body>
     <header>
       <div>
         <span>
-          <img src="./src/assets/icons/logo-white.svg" alt="green thumb" />
+          <img src="./assets/icons/logo-white.svg" alt="green thumb" />
           <h1>Find your next green friend</h1>
           <a href="#form">
-            <img src="./src/assets/icons/arrow-down.svg" alt="Arrow Down" class="arrow">
+            <img src="./assets/icons/arrow-down.svg" alt="Arrow Down" class="arrow">
           </a>
         </span>
-        <img src="./src/assets/hero/desktop/plantperson.png" alt="Plant Person">
+        <img src="./assets/hero/desktop/plantperson.png" alt="Plant Person">
       </div>
     </header>
 
@@ -29,7 +29,7 @@
       <form>
         <div class="form__group">
           <label for="sun">
-            <img src="./src/assets/illustrations/sun.png" alt="Sun" class="sun">
+            <img src="./assets/illustrations/sun.png" alt="Sun" class="sun">
             <p><b>1.</b> Set the amount of <b>sunlight</b> your plant will get.</p>
           </label>
           <select name="sun" id="sun" required>
@@ -41,7 +41,7 @@
         </div>
         <div class="form__group margin__top">
           <label for="water">
-            <img src="./src/assets/illustrations/wateringcan.png" alt="Water" class="water">
+            <img src="./assets/illustrations/wateringcan.png" alt="Water" class="water">
             <p><b>2.</b> How often do you want to <b>water</b> your plant?</p>
           </label>
           <select name="water" id="water" required>
@@ -53,7 +53,7 @@
         </div>
         <div class="form__group margin__top">
           <label for="pets">
-            <img src="./src/assets/illustrations/dog.png" alt="Pets" class="pets">
+            <img src="./assets/illustrations/dog.png" alt="Pets" class="pets">
             <p><b>3.</b> Do you have pets? Do they <b>chew</b> plants?</p>
           </label>
           <select name="pets" id="pets" required>
@@ -71,22 +71,22 @@
           <h1>No results yet…</h1>
           <p>Use the filters above to find the plant that best fits your environment :)</p>
         </span>
-        <img src="./src/assets/illustrations/no-results.png" alt="No results">
+        <img src="./assets/illustrations/no-results.png" alt="No results">
       </div>
 
       <div id="results">
-        <img src="./src/assets/illustrations/pick.png" alt="Pick">
+        <img src="./assets/illustrations/pick.png" alt="Pick">
         <h1>Our picks for you</h1>
 
         <div id="cards"></div>
 
         <button type="button" onClick="window.scrollTo(0, 0)">
-          <img src="./src/assets/icons/arrow-up.svg" alt="Arrow up">
+          <img src="./assets/icons/arrow-up.svg" alt="Arrow up">
           <p>back to the top</p>
         </button>
       </div>
     </main>
   </body>
 
-  <script src="./src/js/index.js"></script>
+  <script src="./js/index.js"></script>
 </html>
